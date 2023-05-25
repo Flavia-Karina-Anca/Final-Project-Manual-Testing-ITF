@@ -12,15 +12,9 @@ Tools used: Jira, Zephyr Squad, Postman, MySQL Workbench.
 
 ## Functional Specifications
 The stories below represent the functional specifications for the module tested for this project created in JIRA.
-![story-sytem-user](https://github.com/Flavia-Karina-Anca/Final-Project-Manual-Testing-ITF/assets/126013931/85a899e8-68b9-4fad-a1f2-bc3b26422219 "User Management Section")
-
-![story-job-titles](https://github.com/Flavia-Karina-Anca/Final-Project-Manual-Testing-ITF/assets/126013931/bcab5323-c957-4838-9709-247790a18554 "Job Titles Section")
-
-![story-pay-grade](https://github.com/Flavia-Karina-Anca/Final-Project-Manual-Testing-ITF/assets/126013931/0ad84c20-3dec-45c8-bfcd-e9dda335dc7b "Pay Grades Section")
-
-![story-employment-status](https://github.com/Flavia-Karina-Anca/Final-Project-Manual-Testing-ITF/assets/126013931/883b560a-ffec-4dce-bc90-33317f513a56 "Employment Status Section")
-
-![story-job-categories](https://github.com/Flavia-Karina-Anca/Final-Project-Manual-Testing-ITF/assets/126013931/0668c48b-2b90-4f39-9229-32c5d5edbf90 "Job Categories Section")
-
-![story-work-shifts](https://github.com/Flavia-Karina-Anca/Final-Project-Manual-Testing-ITF/assets/126013931/9d9b4385-858c-4f54-a139-9664b5bc1a84 "Work Shifts Section")
-
+![story-sytem-user](https://github.com/Flavia-Karina-Anca/Final-Project-Manual-Testing-ITF/assets/126013931/2b38b29c-edf2-47da-97af-25de4746435b "User Management")
+![story-job-titles](https://github.com/Flavia-Karina-Anca/Final-Project-Manual-Testing-ITF/assets/126013931/e6de112b-ac18-4d4f-83ea-5744cad65a50 "Job Titles")
+![story-pay-grade](https://github.com/Flavia-Karina-Anca/Final-Project-Manual-Testing-ITF/assets/126013931/cc6e5ace-319f-4845-b316-fe3331505420 "Pay Grade")
+![story-employment-status](https://github.com/Flavia-Karina-Anca/Final-Project-Manual-Testing-ITF/assets/126013931/e0fd3007-0b2a-40a5-9a93-370f3c0fc7d6 "Employment Status")
+![story-job-categories](https://github.com/Flavia-Karina-Anca/Final-Project-Manual-Testing-ITF/assets/126013931/a8e23ce6-dda5-4da1-a003-20db2a8f49e9 "Job Categories")
+![story-work-shifts](https://github.com/Flavia-Karina-Anca/Final-Project-Manual-Testing-ITF/assets/126013931/6c9fe238-fb2b-4c89-a28b-1ba07d70d1f5 "Work Shifts")
