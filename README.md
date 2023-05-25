@@ -12,7 +12,7 @@ Tools used: Jira, Zephyr Squad, Postman, MySQL Workbench.
 
 ## Functional Specifications
 The stories below represent the functional specifications for the module tested for this project created in JIRA.
-![story-sytem-user](https://github.com/Flavia-Karina-Anca/Final-Project-Manual-Testing-ITF/assets/126013931/06f7e6ce-30f9-490e-ad64-182e7606b611 "User Management Section")
+![story-sytem-user](https://github.com/Flavia-Karina-Anca/Final-Project-Manual-Testing-ITF/assets/126013931/85a899e8-68b9-4fad-a1f2-bc3b26422219 "User Management Section")
 
 ![story-job-titles](https://github.com/Flavia-Karina-Anca/Final-Project-Manual-Testing-ITF/assets/126013931/bcab5323-c957-4838-9709-247790a18554 "Job Titles Section")
 
