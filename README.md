@@ -4,7 +4,7 @@ The scope of the final project for ITF Manual Testing Course is to use all gaine
 
 Application under test: [Orange HRM](https://opensource-demo.orangehrmlive.com/web/index.php/auth/login)
 
-API documentation for the API section: [Simple Books API](https://github.com/vdespa/introduction-to-postman-course/blob/main/simple-books-api.md)
+API documentation for the API section: [Simple Books API](https://github.com/vdespa/introduction-to-postman-course/blob/main/simple-books-api.md). View the Simple Books collection [here](Simple-Books.postman_collection.json) and the test run in Postman [here](Simple-Books.postman_test_run.json).
 
 The final project will be split into two sections: Testing Section and SQL Section.
 
