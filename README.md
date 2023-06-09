@@ -101,7 +101,14 @@ Bugs have been created based on the failed tests. The complete bug reports can b
 
 ## 1.7 Test Completion
 The exit criteria was evaluated and passed.
-The traceability matrix was generated and can be found here.
 
+The traceability matrix was generated and can be found [here](admin-module-traceability-matrix.xlsx).
 
+The test execution chart was generated, the final report shows that out of 34 total tests planned for execution, all of them have been executed, 7 tests have failed and 27 tests have passed.
 
+A number of 8 total bugs were found: 3 with low priority, 2 with high priority and 3 with medium priority.
+
+![admin-module-test-execution-by-cycle2](https://github.com/Flavia-Karina-Anca/Final-Project-Manual-Testing-ITF/assets/126013931/3deb9499-31a6-49f6-8482-fcee4b5dffeb "Test execution by cycle for Admin Module")
+
+# SQL Section
+SOON TO BE UPDATED
