@@ -59,3 +59,49 @@ The plan identifies the items to be tested, the features to be tested, the types
 #### 1.1.6 Evaluating entry criteria
 The entry criterias defined in the Test Planning phase have been achieved and the test process can continue.
 
+## 1.2 Test Monitoring and Control
+The test monitoring and control is done by generating various periodic reports that reflect the current status of the test.
+
+## 1.3 Test Analysis
+The testing process will be executed based on the requirements for the Admin Module. The following test conditions were found for all sections scheduled to be tested:
+- adding an entry;
+- deleting a single entry ori multiple entries at the same time;
+- editing an entry;
+- searching for an entry;
+- cancelling adding/editing an entry;
+- testing the GUI elements of the page.
+
+## 1.4 Test Design
+Functional test cases were created in Zephyr Squad. Based on the analysis of the specifications, the test design techniques used for generating test cases are: equivalence partitioning, boundary value analysis and exploratory, where the requirement specifications were vague.
+
+Test cases:
+
+![admin-module-test-conditions](https://github.com/Flavia-Karina-Anca/Final-Project-Manual-Testing-ITF/assets/126013931/d6e85a48-2af2-4ab7-8cde-674378f3c052)
+
+The test cases with steps and execution can be viewed [here](admin-module-test-case-execution.pdf).
+
+## 1.5 Test Implementation
+The following elements are needed to be ready before the test execution phase begins:
+- the test environment is running;
+- access is granted to the test environment: username: Admin, password: admin123;
+- cycle summary is created and the test cases to be executed are added in the cycle summary;
+- the first deadline is established.
+
+## 1.6 Test Execution
+Test cases are executed on the created test cycle summary: [here](admin-module-test-case-execution.pdf).
+Bugs have been created based on the failed tests. The complete bug reports can be found [here](admin-module-bugs.pdf).
+  - [User Management] 'Confirm Password' text is displayed without spacing under the password tips when viewing the responsive page.
+  - [User Management] Two spaces instead of one are added between employee's first name and last name.
+  - [System Users Search] System users cannot be searched by 'Disabled' value.
+  - [Add Work Shift] The mandatory 'Shift Name' text box is missing the asterisk symbol.
+  - [Add Work Shift] The 'Duration Per Day' count does not show accurate minutes count.
+  - [Work Shifts] The working hours are displayed as a 24H clock in the 'Records Found' section after being displayed as 12H clock in the 'Add Work Shift' section.
+  - [Add Location] 'Country' field value is not saved when using the keyboard to select it from the dropdown.
+  - [Locations Search] Locations cannot be searched by 'Country' when using the keyboard to select a value from the dropdown.
+
+## 1.7 Test Completion
+The exit criteria was evaluated and passed.
+The traceability matrix was generated and can be found here.
+
+
+
