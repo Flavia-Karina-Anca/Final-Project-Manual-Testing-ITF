@@ -53,8 +53,8 @@ The plan identifies the items to be tested, the features to be tested, the types
 - Tests not in scope: performance testing, security testing, integrations of the Admin module with other modules, compatibility testing with multiple browsers
 
 #### 1.1.5 Risks detected
-- Project risks: the lack of experience of the QA team, incomplete and inaccurate requirement specifications, short Zephyr trial deadline
-- Product risks: the complexity of some modules, the application not being what the user needs, the application not functioning as expected by the user, short login time
+- Project risks: the lack of experience of the QA team, incomplete and inaccurate requirement specifications, short Zephyr trial deadline, not being able to fix the defects
+- Product risks: the complexity of some modules, the application not being what the user needs, the application not functioning as expected by the user
 
 #### 1.1.6 Evaluating entry criteria
 The entry criterias defined in the Test Planning phase have been achieved and the test process can continue.
