@@ -29,8 +29,8 @@ CREATE TABLE payGrades (
         REFERENCES systemUsers (systemUserID)
 );
 
--- creare instructiuni de INSERT pentru fiecare tabela
-	-- instructiuni insert simple
+-- creating INSERT instructions for each table
+	-- simple
 insert into systemUsers(username, userRole, employeeName, status)
 values ('roxana_rozalia','admin', 'Roxana Rozalia', 'enabled');
 insert into systemUsers(username, userRole, employeeName, status)
@@ -64,7 +64,7 @@ values ('office clerk', '', '3');
 insert into jobTitles(jobTitles, jobDescription, systemUserID)
 values ('assistant buyer', '', '6');
 
-	-- instructiuni insert compuse
+	-- composed
 insert into systemUsers(username, userRole, employeeName, status)
 values ('emanuel_neculai', 'ESS', 'Emanuel Neculai', 'enabled'),
 ('traian_petrescu', 'ESS', 'Traian Petrescu', 'disabled'),
@@ -86,7 +86,7 @@ values('UX designer', '', '5'),
 ('Java developer', '', '10'),
 ('software tester', '', '9');
 
--- creare instructiuni de ALTER
+-- creating ALTER instructions
 alter table systemUsers add column dateOfBirth date;
 
 alter table systemUsers add column city varchar (100),
@@ -105,14 +105,14 @@ alter table payGrades drop column name;
  
 alter table jobTitles drop column jobSpecification;
 
--- creare instructiuni de UPDATE
-	-- instructiuni simple
+-- creating UPDATE instructions
+	-- simple
 update systemUsers set userRole = 'ESS';
 update systemUsers set status = 'enabled';
 update payGrades set currency = 'EUR';
 update jobTitles set jobDescription = 'this job is perfect';
 
-	-- instructiuni compuse
+	-- composed
 update systemUsers set userRole = 'admin' where employeeName like 'c%';
 update systemUsers set status = 'disabled' where username like '%n';
 update systemUsers set city = 'Cluj' where status = 'enabled';
@@ -128,13 +128,13 @@ update jobTitles set experienceLevel = 'entry' where jobTitleID in (4, 5, 10);
 update jobTitles set experienceLevel = 'middle' where jobTitleID in (1, 2, 3);
 update jobTitles set experienceLevel = 'senior' where jobTitleID not in (1, 2, 3, 4, 5, 10);
 
--- creare instructiuni de SELECT
-	-- selectarea tuturor coloanelor si inregistrarilor adaugate in tabele
+-- creating SELECT instructions
+	-- selecting all columns and entries
 select * from systemUsers;
 select * from payGrades;
 select * from jobTitles;
 
-	-- selectarea mai multor coloane
+	-- selecting multiple columns
 select systemUserID, username, employeeName from systemUsers;
 select employeeName, status from systemUsers;
 select username, userRole from systemUsers;
@@ -142,13 +142,13 @@ select username, userRole, status from systemUsers;
 select payGradeID, currency from payGrades;
 select jobTitles, jobDescription from jobTitles;
 
-	-- selectarea unei singure coloane
+	-- selecting one column
 select username from systemUsers;
 select currency from payGrades;
 select jobTitles from jobTitles;
 select userRole from systemUsers;
 
-	-- selectarea dupa diverse criterii cu filtrare simpla
+	-- selecting by different criteria with a simple filter
 select * from systemUsers where employeeName in ('Petre Marian Dinu');
 select * from systemUsers where userRole = 'admin';
 select * from systemUsers where userRole = 'ESS';
@@ -160,7 +160,7 @@ select * from jobTitles where jobDescription is null;
 select * from payGrades where currency like 'GBP';
 select * from payGrades where maximumSalary like '50000';
 
-	-- selectarea dupa diverse criterii cu filtrare compusa
+	-- selecting by different criteria with composed filters
 select * from systemUsers where employeeName like 'r%' and city = 'Cluj';
 select * from systemUsers where userRole = 'ESS' and city = 'Bucuresti';
 select * from systemUsers where status = 'enabled' and userRole = 'ESS';
@@ -171,7 +171,7 @@ select * from jobTitles where (jobTitles like 'o%' or experienceLevel like '%y')
 select * from payGrades where currency = 'RON' and minimumSalary like 1898;
 select * from payGrades where (minimumSalary = '384' or maximumSalary = '10000') and currency = 'EUR';
 
--- instructiuni cu functii agregate
+-- instructions with aggregate functions
 select sum(maximumSalary) from payGrades;
 select avg(minimumSalary) from payGrades;
 select min(minimumSalary) from payGrades;
@@ -180,38 +180,38 @@ select count(*) from systemUsers;
 select count(city) from systemUsers;
 select count(supervisorID) from systemUsers;
 
--- instructiuni care contin clauza HAVING
-	-- care angajati au supervizor si cati supervizori are fiecare
+-- instructions with HAVING clause
+	-- how many employees have a supervisor and how many supervisors each one has
 select employeeName, systemUserID, count(supervisorID) from systemusers
 group by employeeName having count(supervisorID);
 
-	-- cati angajati sunt in fiecare oras
+	-- the number of employees in every city
 select count(systemUserID), city from systemUsers
 group by city having count(systemUserID) > 1;
 
-	-- angajati cu salariul mai mare de 50.000
+	-- employees with salary higher than 50.000
 select p.systemUserID, employeeName, avg(maximumSalary) as avg_salary
 from payGrades p inner join systemUsers s on s.systemUserID=p.systemUserID
 group by systemUserID, employeeName
 having avg(maximumSalary)>50000;
 
-	-- angajati cu salariul minim mai mic de 500
+	-- employees with minimum salary lower than 500
 select p.systemUserID, employeeName, currency, min(minimumSalary) as min_salary
 from payGrades p inner join systemUsers s on s.systemUserID=p.systemUserID
 group by systemUserID, employeeName, currency
 having min(minimumSalary)<500;
 
-	-- cati angajati sunt pe fiecare nivel de experienta
+	-- the number of employees on every level of experience
 select count(systemUserID), experienceLevel from jobTitles
 group by experienceLevel having count(systemUserID);
 
-	-- selectarea angajatilor cu salariul maxim egal cu 100.000.000 si a joburilor lor
+	-- employees with the maximum salary equal to 100.000.000 and their job title
 select j.systemUserID, jobTitles, experienceLevel, max(maximumSalary)
 from jobTitles j inner join payGrades p on j.systemUserID = p.systemUserID
 group by systemUserID, experienceLevel, maximumSalary
 having max(maximumSalary)=100000000;
 
--- instructiuni care contin clauza GROUP BY (+ order by)
+-- instructions with the GROUP BY clause & ORDER BY clause
 select userRole, employeeName from systemUsers group by systemUserID limit 6;
 select currency, minimumSalary from payGrades group by payGradeID, maximumSalary limit 5;
 select experienceLevel, jobTitles from jobtitles group by jobTitleID;
@@ -222,11 +222,11 @@ select * from systemUsers order by city;
 select * from systemUsers order by employeeName desc;
 select userRole, city, employeeName from systemUsers order by employeeName;
 
--- instructiuni de TRUNCATE (se sterg toate informatiile din tabela)
+-- TRUNCATE instructions
 truncate table paygrades;
 truncate table jobTitles;
 
--- instructiuni de DELETE (se sterg fie toate informatiile din tabela, fie anumite informatii pe care le filtram)
+-- DELETE instructions
 delete from jobTitles where experienceLevel = 'senior';
 delete from jobTitles where jobTitles like '%er';
 delete from jobTitles where jobDescription like 't%';
@@ -235,7 +235,7 @@ delete from systemUsers where userRole like 'ESS';
 delete from systemUsers where status = 'disabled';
 delete from systemUsers where employeeName like 'r%';
 
--- verificam instructiunile de TRUNCATE si DELETE
+-- checking the TRUNCATE and DELETE instructions
 select * from systemUsers;
 select * from jobTitles;
 select * from paygrades;
