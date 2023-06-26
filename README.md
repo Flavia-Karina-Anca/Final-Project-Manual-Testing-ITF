@@ -110,5 +110,7 @@ A number of 8 total bugs were found: 3 with low priority, 2 with high priority a
 
 ![admin-module-test-execution-by-cycle2](https://github.com/Flavia-Karina-Anca/Final-Project-Manual-Testing-ITF/assets/126013931/3deb9499-31a6-49f6-8482-fcee4b5dffeb "Test execution by cycle for Admin Module")
 
-# SQL Section
-SOON TO BE UPDATED
+# 2. SQL Section
+I created a database for the Admin module named 'admin' and three tables named 'systemUsers', 'jobTitles' and 'payGrades'.
+
+Different queries were performed and can be checked out [here](admin-module-db.sql).
